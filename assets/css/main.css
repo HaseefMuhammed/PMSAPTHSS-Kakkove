@@ -1349,6 +1349,7 @@ section,
 
 .testimonials .swiper-wrapper {
   height: auto;
+  cursor: grab;
 }
 
 .testimonials .swiper-pagination {
