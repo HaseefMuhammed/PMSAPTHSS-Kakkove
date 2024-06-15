@@ -53,3 +53,34 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.bglogin{
+    background-image: url("assets/img/login\ bg\ kkv.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.forget{
+    cursor: pointer;
+}
+.bgfacts{
+    background-image: url("assets/img/6.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.funfact{
+    background-image: url("assets/img/bulb.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.bg-chat{
+    background-image: url("assets/img/chat.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}

@@ -30,6 +30,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Mentor
@@ -38,6 +39,16 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+  </style>
 </head>
 
 <body>
@@ -56,9 +67,9 @@
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="about.html">About us</a></li>
           <li><a href="trainers.html">Teachers</a></li>
-          <li><a href="events.html" class="active">News</a></li>
+          <li><a href="events.html" >News</a></li>
           <li><a href="contact.html">Contact us</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -72,12 +83,12 @@
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading bgnews">
+      <div class="heading bglogin">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Latest News & Updates</h1>
-              <p class="mb-0">"Stay updated with the latest happenings at PMSAPTHSS Kakkove on our news page. From academic achievements to extracurricular successes, find out what's happening in our vibrant school community. Explore our news section for all the highlights and announcements."</p>
+              <h1>Login to the community</h1>
+              <p class="mb-0">"Welcome to PMSAPTHSS Kakkove – Where Knowledge Meets Excellence!"</p>
             </div>
           </div>
         </div>
@@ -86,8 +97,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="events.html">News</a></li>
-            <li class="current">Admin</li>
+            <li class="current">Login</li>
           </ol>
         </div>
       </nav>
@@ -95,9 +105,60 @@
 
 
     <!-- Events Section -->
-    <div class="alert alert-danger">
-        <strong>Important message!</strong> Please send your post image in 9074726534 whatsapp to upload it faster or <a class="text-danger" href="https://wa.me/+919074726534">Click here</a>
-      </div>
+    <div class="container">
+      <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+              <form id="submit-form" action="">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form1Example13">Enter your name</label><i class="text-danger">*</i>
+                  <input type="text" id="form1Example13" class="form-control form-control-lg" name="Name"  required/>
+                  
+                </div>
+      
+                <!-- Password input -->
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form1Example23">Select your class</label><i class="text-danger">*</i>
+                  <select class="form-select" aria-label="Default select example" name="Class" required>
+                    <option value="" selected>Click here to select</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                    <option value="Class 8">Class 8</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option>
+                  </select>
+                  
+                  
+                </div>
+      
+                <div class="d-flex justify-content-around align-items-center mb-4">
+                  <!-- Checkbox -->
+  
+                </div>
+      
+                <!-- Submit button -->
+                 <div class="text-center">
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">Login</button>
+              </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    </section><!-- /Events Section -->
 
   </main>
 
@@ -171,6 +232,26 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxVUO0l8l1V1RBAzx3hnFNZSHdpMeKE6Wcc0Ho62dnTnNVz6H8szqxqZhnoAh45Ox4Q/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Successfully logged..")
+                //window.location.reload()
+                window.location.href="account.html"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
